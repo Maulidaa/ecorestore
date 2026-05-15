@@ -1,73 +1,68 @@
-# React + TypeScript + Vite
+# EcoRestore-AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+EcoRestore-AI adalah aplikasi demo berbasis React + TypeScript untuk pemantauan restorasi pesisir. Aplikasi ini menampilkan alur analisis dalam satu halaman yang bisa di-scroll, dengan navigasi cepat ke setiap bagian utama seperti Home, Dashboard, WebGIS, Analisis, dan Karbon.
 
-Currently, two official plugins are available:
+## Fitur Utama
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Landing page dengan hero, statistik, dan CTA.
+- Dashboard ringkas untuk prioritas restorasi.
+- WebGIS interaktif dengan peta, legenda polygon, detail lokasi, rekomendasi AI, kalender tanam, dan dashboard lingkungan.
+- Halaman Analisis untuk penjelasan alur identifikasi zona prioritas.
+- Halaman Karbon untuk estimasi serapan karbon dan tren abrasi.
+- Navigasi internal yang mengikuti posisi scroll.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- TypeScript
+- Vite
+- Leaflet untuk peta
+- Chart.js untuk visualisasi data
+- Tailwind CSS via CDN di `index.html`
 
-## Expanding the ESLint configuration
+## Struktur Proyek
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+src/
+  App.tsx
+  main.tsx
+  index.css
+  components/
+  pages/
+    Home.tsx
+    Dashboard.tsx
+    WebGIS.tsx
+    Analisis.tsx
+    Karbon.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Menjalankan Proyek
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Install dependensi:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+2. Jalankan mode development:
+
+```bash
+npm run dev
+```
+
+3. Build production:
+
+```bash
+npm run build
+```
+
+4. Cek lint:
+
+```bash
+npm run lint
+```
+
+## Catatan
+
+- Beberapa aset seperti Leaflet dan Chart.js dimuat melalui CDN di `index.html`.
+- Aplikasi dirancang sebagai satu halaman dengan section yang saling tersambung lewat scroll, bukan perpindahan route penuh.
