@@ -1,0 +1,21 @@
+.dashboard-bg {
+  background-color: #eef4eb;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.gradient-green {
+  background: linear-gradient(135deg, #0B3D2E, #AEB784);
+}
+
+.soft-shadow {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.section-title {
+  font-family: 'Archivo', cursive;
+}

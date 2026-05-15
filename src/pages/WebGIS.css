@@ -1,0 +1,119 @@
+.eco-blue {
+  color: #134332;
+}
+
+.section-title {
+  font-family: 'Archivo', cursive;
+}
+
+#map {
+  height: 350px;
+  border-radius: 0.75rem;
+  width: 100%;
+  z-index: 10;
+}
+
+.map-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.map-color {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  flex: none;
+}
+
+.map-color-vegetation-loss {
+  background: #ef4444;
+}
+
+.map-color-mangrove-increase {
+  background: #AEB784;
+}
+
+.map-color-mangrove-decrease {
+  background: #f59e0b;
+}
+
+.map-color-stable {
+  background: #22d3ee;
+}
+
+.map-color-abrasion {
+  background: #fb923c;
+}
+
+.map-color-restoration {
+  background: #6366f1;
+}
+
+.map-popup {
+  width: 240px;
+}
+
+.map-popup-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.popup-restoration {
+  color: #6366f1;
+}
+
+.popup-vegetation-loss {
+  color: #ef4444;
+}
+
+.popup-mangrove-increase {
+  color: #AEB784;
+}
+
+.popup-abrasion {
+  color: #fb923c;
+}
+
+.popup-stable {
+  color: #22d3ee;
+}
+
+.map-popup-text {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.map-popup-meta {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.map-popup-meta-label {
+  font-size: 12px;
+  color: #64748b;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.map-popup-meta-item {
+  margin-top: 4px;
+  font-weight: 700;
+}
+
+.polygon-label {
+  background: rgba(15, 23, 42, 0.82);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.18);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 4px 10px;
+}

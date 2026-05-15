@@ -1,0 +1,43 @@
+.gradient-green { 
+  background: linear-gradient(135deg, #0B3D2E, #AEB784); 
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+  padding-left: 22px;
+  font-size: 0.95rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-link.active {
+  color: #134332;
+  font-size: 1.05rem;
+}
+
+.nav-link.active::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #134332;
+  border-radius: 50%;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  box-shadow: 0 0 10px rgba(174, 183, 132, 0.6);
+  animation: activeIndicator 0.3s ease;
+}
+
+@keyframes activeIndicator {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+}
